@@ -1,0 +1,36 @@
+.env
+AGENTS.md
+agents.md
+.venv/
+.tools/
+terraform/terraform.tfvars
+setup_prompt.md
+
+# Terraform
+**/.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+crash.log
+crash.*.log
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+.terraform.lock.hcl
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Logs
+*.log
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+.idea/
+
+docs/
