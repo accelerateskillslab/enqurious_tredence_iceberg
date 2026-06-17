@@ -7,7 +7,8 @@ In AWS Console, create an access key for your lab user.
 ## 2. Clone Repo
 
 ```cmd
-git clone https://github.com/AyushBajpayee/enqurious_tredence_iceberg.git
+git clone https://github.com/accelerateskillslab/enqurious_tredence_iceberg.git
+cd enqurious_tredence_iceberg
 ```
 
 ## 3. Create `.env`
