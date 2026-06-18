@@ -24,6 +24,8 @@ Fill all values.
 ```cmd
 scripts\setup_lab.cmd
 ```
+Then run
+.venv\Scripts\activate.bat
 
 This installs/checks:
 
