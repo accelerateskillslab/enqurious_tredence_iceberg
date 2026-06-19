@@ -2,7 +2,7 @@ CREATE TABLE practice.orders_iceberg_partitionby_month
 WITH (
   table_type = 'ICEBERG',
   is_external = false,
-  location = 's3://iceberg-data-lake-032918951512/iceberg/',
+  location = 's3://iceberg-data-lake-<aws account id>/iceberg/orders_iceberg_partitionby_month',
   format = 'PARQUET',
   partitioning = ARRAY['month(order_date)']
 )
