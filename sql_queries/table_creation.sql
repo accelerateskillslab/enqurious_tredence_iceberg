@@ -1,5 +1,5 @@
 CREATE EXTERNAL TABLE practice.orders_raw (
-  order_id bigint,
+  order_id bigint primary key,
   customer_id string,
   order_date string,
   product_category string,
