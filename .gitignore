@@ -33,5 +33,5 @@ Thumbs.db
 !.vscode/settings.json
 .idea/
 
-docs/
+# docs/
 data/
