@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 random.seed(42)
 
-ROW_COUNT = 5000
+ROW_COUNT = 500000
 ### Set DUMP_FORMAT TO EITHER "csv" OR "parquet" BASED ON YOUR PREFERENCE
 DUMP_FORMAT = "csv"
 OUTPUT_DIR = Path("data")
