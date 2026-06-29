@@ -1,4 +1,4 @@
-1) Create these 3 folders
+1) Create these 2 folders
 	s3://iceberg-data-lake-958165011713/glue-iceberg-warehouse/
 	s3://iceberg-data-lake-958165011713/glue-temp/
 	

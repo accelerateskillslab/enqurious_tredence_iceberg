@@ -1,0 +1,1 @@
+Fully theoritical and explains the concepts of CDC vs Snapshot
