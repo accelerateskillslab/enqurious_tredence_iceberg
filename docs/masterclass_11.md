@@ -65,7 +65,7 @@ ETL PIPELINE 1 - ICEBERG TO AURORA INCREMENTAL
 
 Add these job parameters:
 
-Key	Value
+Key	Value (copy the double dashes also in the beginning)
 --AURORA_HOST	your Aurora writer endpoint
 --AURORA_PORT	5432
 --AURORA_DB	practice
@@ -76,8 +76,9 @@ Key	Value
 --datalake-formats iceberg
 3) Upload wheel file in s3 and set additional python modules to that s3 uri (upload the wheel file under assets)
 4) Change the worker count to 2 from 10(default)
-5) Refer aurora_table_creation.sql, run the full query.
-6) Run the script and see the changes.
+5) Upload the script iceberg_to_aurora_incremental.py
+6) Refer aurora_table_creation.sql, run the full query.
+7) Run the script and see the changes.
 
 ETL PIPELINE 2 - ICEBERG TO AURORA INCREMENTAL
 ---------------------------------------------------------------------------------------------------
