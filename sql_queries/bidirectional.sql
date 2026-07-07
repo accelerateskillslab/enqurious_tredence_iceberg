@@ -115,3 +115,25 @@ SET
 WHERE order_id IN (
     100002, 100003, 100004    
 );
+
+--RUN THIS IN AURORA TO CREATE SOME CHANGES
+UPDATE public.inventory_sync
+SET
+    available_quantity = GREATEST(available_quantity - 20, 0),
+    damaged_quantity = damaged_quantity + 20,
+    movement_type = 'STOCK_ADJUSTED',
+    inventory_status = CASE
+        WHEN GREATEST(available_quantity - 20, 0) = 0 THEN 'OUT_OF_STOCK'
+        WHEN GREATEST(available_quantity - 20, 0) < 20 THEN 'LOW_STOCK'
+        ELSE 'IN_STOCK'
+    END,
+    source_system = 'AURORA',
+    sync_version = COALESCE(sync_version, 1) + 1,
+    updated_at = CURRENT_TIMESTAMP
+WHERE inventory_id IN (
+    SELECT inventory_id
+    FROM public.inventory_sync
+    ORDER BY updated_at DESC
+    LIMIT 5
+);
+

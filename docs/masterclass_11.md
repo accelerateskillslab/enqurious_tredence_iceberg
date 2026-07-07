@@ -29,7 +29,7 @@ port range 0-65535
 4) Hit save rules
 
 Create a glue connection
-1) JDBC, set url: jdbc:postgresql://<your endpoint>/ordersdb 
+1) JDBC, set url: jdbc:postgresql://<your endpoint>/practice 
 2) Set the correct sg iceberg_aurora_sg
 3) Create vpc endpoint, name it to s3-gateway-endpoint-for-glue as name
     Select aws services
@@ -37,7 +37,7 @@ Create a glue connection
     vpc: default available
     Add the route table
     Create endpoint
-4) Create another vpc endpoint, name it to Glue Interface Endpoint
+4) Create another vpc endpoint, name it to Glue-Interface-Endpoint
     Select aws services
     In services search, com.amazonaws.us-east-1.glue and select
     Use the vpc from the dropdown
@@ -93,8 +93,9 @@ Key	Value
 --AURORA_USER	postgres
 --AURORA_PASSWORD	your password
 --ICEBERG_TABLE	glue_catalog.practice.orders_iceberg_bidir
---PIPELINE_NAME	iceberg_to_aurora_orders
+--PIPELINE_NAME	aurora_to_iceberg_orders
 --datalake-formats iceberg
 3) Upload wheel file in s3 and set additional python modules to that s3 uri (upload the wheel file under assets)
 4) Change the worker count to 2 from 10(default)
+5) Upload the script aurora_to_iceberg_reverse_sync.py
 5) Run some update queries in aurora to make changes, refer bidirectional.sql line 107
